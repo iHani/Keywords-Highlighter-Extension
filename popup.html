@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <title>Getting Started Extension's Popup</title>
+  <style type="text/css">
+  body {
+    margin: 10px;
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-size: 15px;
+  }
+
+  #container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  </style>
+
+  <!--
+  - JavaScript and HTML must be in separate files: see our Content Security
+  - Policy documentation[1] for details and explanation.
+  -
+  - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+-->
+<script src="popup.js"></script>
+</head>
+
+<style media="screen">
+
+.checkMark{
+  padding: 5px;
+  margin: 2px 0;
+  float: right;
+  color: #4CAF50;
+  font-size: 18px;
+}
+
+.saveButton {
+  padding: 5px;
+  margin: 5px 0;
+  float: right;
+  background-color: #4CAF50;
+  color: white;
+  width: 75px;
+}
+
+.saveButton:focus {
+  outline:0 !important;
+}
+
+.colorPicker {
+  padding: 5px;
+  margin: 5px 0;
+  float: left;
+}
+
+</style>
+
+<body>
+
+  <strong>Keywords to highlighte</strong> <span>(separate by comma):</span>
+  <div id="container">
+    <textarea id="kw-list" name="name" rows="4" cols="35">school,the, find</textarea>
+  </div>
+  <div class="colorPicker">
+    <input id="color-picker" type="color">
+    <input type="checkbox" name="vehicle" value="Bike"> Animate
+  </div>
+  <div>
+    <button class="saveButton" type="button" name="button" onclick="myFunction()"><strong>Save</strong></button>
+    <span class="checkMark" >&#x2714;</span>
+  </div>
+
+</body>
+</html>
